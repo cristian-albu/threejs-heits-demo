@@ -1,5 +1,9 @@
 import "./style.css";
 
+import cubeTextureJPG from "/cubeTexture.jpg";
+import cubeNormalMapPNG from "/cubeNormalMap.png";
+import bgTextureJPG from "/bgTexture.jpg";
+
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
 
@@ -17,8 +21,8 @@ camera.position.setZ(30);
 
 renderer.render(scene, camera);
 
-const cubeTexture = new THREE.TextureLoader().load("./assets/cubeTexture.jpg");
-const cubeNormalMap = new THREE.TextureLoader().load("./assets/cubeNormalMap.png");
+const cubeTexture = new THREE.TextureLoader().load(cubeTextureJPG);
+const cubeNormalMap = new THREE.TextureLoader().load(cubeNormalMapPNG);
 const geometry = new THREE.BoxGeometry(8, 8, 8);
 const material = new THREE.MeshStandardMaterial({
   map: cubeTexture,
@@ -71,7 +75,7 @@ scene.add(spinningCube);
 
 Array(200).fill().forEach(addCubes);
 
-const bgTexture = new THREE.TextureLoader().load("./assets/bgTexture.jpg");
+const bgTexture = new THREE.TextureLoader().load(bgTextureJPG);
 scene.background = bgTexture;
 
 const spinningRadius = 10;
