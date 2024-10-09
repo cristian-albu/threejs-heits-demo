@@ -1,3 +1,3 @@
 export default {
-  base: "/cristian-albu.github.io/threejs-heits-demo/",
+  base: "/threejs-heits-demo/",
 };

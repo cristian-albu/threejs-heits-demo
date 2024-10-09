@@ -17,8 +17,8 @@ camera.position.setZ(30);
 
 renderer.render(scene, camera);
 
-const cubeTexture = new THREE.TextureLoader().load("/cubeTexture.jpg");
-const cubeNormalMap = new THREE.TextureLoader().load("/cubeNormalMap.png");
+const cubeTexture = new THREE.TextureLoader().load("./assets/cubeTexture.jpg");
+const cubeNormalMap = new THREE.TextureLoader().load("./assets/cubeNormalMap.png");
 const geometry = new THREE.BoxGeometry(8, 8, 8);
 const material = new THREE.MeshStandardMaterial({
   map: cubeTexture,
@@ -71,7 +71,7 @@ scene.add(spinningCube);
 
 Array(200).fill().forEach(addCubes);
 
-const bgTexture = new THREE.TextureLoader().load("/bgTexture.jpg");
+const bgTexture = new THREE.TextureLoader().load("./assets/bgTexture.jpg");
 scene.background = bgTexture;
 
 const spinningRadius = 10;
