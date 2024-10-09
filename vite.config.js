@@ -1,3 +1,3 @@
 export default {
-  base: "/threejs-heits-demo/",
+  base: "/",
 };
